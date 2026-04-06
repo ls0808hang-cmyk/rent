@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>전세/월세 총비용 비교기 | 비교 계산</title>
+  <meta name="description" content="전세 보증금, 대출금리, 월세, 관리비, 거주기간을 입력해 전세와 월세 총비용을 비교해보세요.">
+  <link rel="canonical" href="https://rent-cost-check.pages.dev/compare/">
+  <meta property="og:title" content="전세/월세 총비용 비교기">
+  <meta property="og:description" content="총비용 기준으로 전세와 월세를 비교해보세요.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rent-cost-check.pages.dev/compare/">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:site_name" content="전세/월세 총비용 비교기">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "전세/월세 총비용 비교기 | 비교 계산",
+    "url": "https://rent-cost-check.pages.dev/compare/",
+    "description": "전세 보증금, 대출금리, 월세, 관리비, 거주기간을 입력해 총비용을 비교하는 페이지",
+    "inLanguage": "ko-KR"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문 바로가기</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/index.html">
+        <span class="brand-badge">주거</span>
+        <span>전월세비교기</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" data-nav-toggle>☰</button>
+      <nav class="site-nav" aria-label="주요 메뉴" data-nav>
+        <ul>
+          <li><a href="/index.html">홈</a></li>
+          <li><a class="active" href="/compare/index.html">비교기</a></li>
+          <li><a href="/guides/">가이드</a></li>
+          <li><a href="/privacy/">개인정보처리방침</a></li>
+          <li><a href="/terms/">이용약관</a></li>
+          <li><a href="/contact/">문의</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <div class="breadcrumb"><a href="/index.html">홈</a> <span>/</span> <span>비교기</span></div>
+      <h1>전세/월세 총비용 비교기</h1>
+      <p class="page-lead">
+        아래 항목을 입력하면 전세와 월세의 총비용을 비교해볼 수 있습니다.
+        결과는 참고용이며 실제 계약 조건에 따라 달라질 수 있습니다.
+      </p>
+
+      <div class="compare-grid compare-layout section-lg">
+        <section class="form-card">
+          <h2>입력값</h2>
+          <form class="form-grid" data-compare-form>
+            <div class="input-group">
+              <label for="jeonseDeposit">전세 보증금</label>
+              <input type="text" id="jeonseDeposit" name="jeonseDeposit" value="200,000,000" inputmode="numeric" data-format="number">
+            </div>
+
+            <div class="input-group">
+              <label for="jeonseRate">전세대출 금리(%)</label>
+              <input type="text" id="jeonseRate" name="jeonseRate" value="3.5" inputmode="decimal" data-format="percent">
+            </div>
+
+            <div class="input-group">
+              <label for="wolseDeposit">월세 보증금</label>
+              <input type="text" id="wolseDeposit" name="wolseDeposit" value="10,000,000" inputmode="numeric" data-format="number">
+            </div>
+
+            <div class="input-group">
+              <label for="monthlyRent">월세</label>
+              <input type="text" id="monthlyRent" name="monthlyRent" value="700,000" inputmode="numeric" data-format="number">
+            </div>
+
+            <div class="input-group">
+              <label for="monthlyMaintenance">월 관리비</label>
+              <input type="text" id="monthlyMaintenance" name="monthlyMaintenance" value="100,000" inputmode="numeric" data-format="number">
+            </div>
+
+            <div class="input-group">
+              <label for="stayMonths">거주 예정 기간(개월)</label>
+              <input type="text" id="stayMonths" name="stayMonths" value="24" inputmode="numeric" data-format="number">
+            </div>
+
+            <div class="input-group">
+              <label for="opportunityRate">보증금 기회비용 연 수익률(%)</label>
+              <input type="text" id="opportunityRate" name="opportunityRate" value="3.0" inputmode="decimal" data-format="percent">
+            </div>
+
+            <div class="input-group">
+              <label for="brokerFee">중개수수료</label>
+              <input type="text" id="brokerFee" name="brokerFee" value="800,000" inputmode="numeric" data-format="number">
+            </div>
+
+            <div class="input-group">
+              <label for="movingCost">이사비</label>
+              <input type="text" id="movingCost" name="movingCost" value="500,000" inputmode="numeric" data-format="number">
+            </div>
+          </form>
+        </section>
+
+        <aside class="sticky-card">
+          <div class="result-card">
+            <h2>비교 결과</h2>
+            <div class="result-grid">
+              <div class="kpi">
+                <span class="kpi-label">전세 총비용</span>
+                <strong class="kpi-value" data-output="jeonse-total">-</strong>
+              </div>
+              <div class="kpi">
+                <span class="kpi-label">월세 총비용</span>
+                <strong class="kpi-value" data-output="wolse-total">-</strong>
+              </div>
+              <div class="kpi">
+                <span class="kpi-label">전세 월평균 실질 주거비</span>
+                <strong class="kpi-value" data-output="jeonse-monthly-average">-</strong>
+              </div>
+              <div class="kpi">
+                <span class="kpi-label">월세 월평균 실질 주거비</span>
+                <strong class="kpi-value" data-output="wolse-monthly-average">-</strong>
+              </div>
+              <div class="kpi">
+                <span class="kpi-label">차액</span>
+                <strong class="kpi-value" data-output="difference">-</strong>
+              </div>
+              <div class="kpi">
+                <span class="kpi-label">더 유리한 선택</span>
+                <strong class="kpi-value" data-output="better-option">-</strong>
+              </div>
+            </div>
+
+            <div class="summary-box">
+              <p data-output="summary">결과 요약이 여기에 표시됩니다.</p>
+            </div>
+
+            <p class="small muted">
+              이 계산은 참고용이며 실제 계약 조건, 금리, 관리비, 중개수수료, 지역별 차이에 따라 달라질 수 있습니다.
+            </p>
+          </div>
+        </aside>
+      </div>
+
+      <section class="card article">
+        <h2>계산 기준</h2>
+        <ul class="list">
+          <li>전세 총비용 = 전세대출이자 + 전세보증금 기회비용 + 중개수수료 + 이사비</li>
+          <li>월세 총비용 = (월세 + 관리비) × 거주개월수 + 월세보증금 기회비용 + 중개수수료 + 이사비</li>
+          <li>보증금이 크면 월 지출이 적더라도 기회비용이 커질 수 있습니다.</li>
+          <li>거주기간이 짧을수록 초기 부대비용의 비중이 커질 수 있습니다.</li>
+        </ul>
+
+        <div class="table-like">
+          <div class="table-row"><span>전세대출이자</span><strong data-output="loan-interest">-</strong></div>
+          <div class="table-row"><span>전세보증금 기회비용</span><strong data-output="jeonse-opportunity">-</strong></div>
+          <div class="table-row"><span>월세보증금 기회비용</span><strong data-output="wolse-opportunity">-</strong></div>
+          <div class="table-row"><span>월세 + 관리비 누적액</span><strong data-output="living-cost">-</strong></div>
+        </div>
+
+        <div class="actions">
+          <a class="btn-secondary" href="/guides/jeonse-vs-wolse-basics.html">비교 기본 가이드</a>
+          <a class="btn-secondary" href="/guides/deposit-opportunity-cost.html">보증금 기회비용 설명</a>
+          <a class="btn-secondary" href="/guides/living-period-comparison.html">거주기간별 비교</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <section>
+          <h3>전월세비교기</h3>
+          <p>총비용 중심으로 전세와 월세를 비교할 수 있도록 돕는 계산기입니다.</p>
+        </section>
+        <section>
+          <h3>바로가기</h3>
+          <ul class="footer-links">
+            <li><a href="/compare/index.html">비교기</a></li>
+            <li><a href="/guides/">가이드</a></li>
+            <li><a href="/privacy/">개인정보처리방침</a></li>
+            <li><a href="/terms/">이용약관</a></li>
+            <li><a href="/contact/">문의</a></li>
+          </ul>
+        </section>
+        <section>
+          <h3>안내</h3>
+          <p>비교 결과는 참고용이며 실제 계약 조건, 대출 한도, 관리비 구성에 따라 달라질 수 있습니다.</p>
+        </section>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span data-current-year></span> 전월세비교기. 계산 결과는 참고용입니다.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script defer src="/assets/js/site.js"></script>
+  <script defer src="/assets/js/compare.js"></script>
+</body>
+</html>
