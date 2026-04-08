@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rent-4nm.pages.dev/sitemap.xml
